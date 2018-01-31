@@ -1,4 +1,4 @@
-bootRun to start the server.
+Run "gradle bootRun" to start the server.
 
 Run "docker run --name budget-tracker -p 5432:5432 -e POSTGRES_DB=budget -e POSTGRES_PASSWORD=mysecretpassword -d postgres"
 
