@@ -7,9 +7,10 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
 @RepositoryRestResource( collectionResourceRel = "expenses", path="expenses")
-public interface ExpenseRepository extends PagingAndSortingRepository<Expense, Long> {
+public interface ExpenseRepository extends PagingAndSortingRepository<Expense, Long>{
 
-    List<Expense> findByReason(@Param("reason") String reason);
+    //https://www.reddit.com/r/javahelp/comments/2khy41/help_spring_repositoryrestresource_queries_with/
+    List<Expense> findByDateContaining(@Param("monthAndYear") String monthAndYear);
 
 }
 

@@ -6,8 +6,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
-@RepositoryRestResource( collectionResourceRel = "expenses", path="expenses")
-public interface ExpenseRepository extends PagingAndSortingRepository<Expense, Long> {
+@RepositoryRestResource( collectionResourceRel = "monthlyExpenses", path="monthlyExpenses")
+public interface MonthlyExpenseRepository extends PagingAndSortingRepository<MonthlyExpense, Long> {
 
     List<Expense> findByReason(@Param("reason") String reason);
 
